@@ -36,6 +36,7 @@ import { useContactStore } from '../stores/contact'
 <template>
   <div class="contact-view">
     <FormContact />
+    <RouterLink to="/Formulaire" class="lien">+</RouterLink>
     <div v-for="contact in contacts" :key="contact.nom">
       <CarteContact :contact="contact" />
     </div>
@@ -53,5 +54,10 @@ import { useContactStore } from '../stores/contact'
 
 nav{
   display: flex;
+}
+
+.lien{
+    font-size: 60px;
+    margin-left: 70%;
 }
 </style>

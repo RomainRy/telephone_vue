@@ -16,7 +16,7 @@ export default {
 <template>
   <div class="home">
     <h2>Liste des Appels</h2>
-    <div v-for="appel in appels" :key="appel.numero">
+    <div class="appel" v-for="appel in appels" :key="appel.numero">
       {{ appel.numero }} - {{ appel.heure }}
     </div>
   </div>
@@ -32,4 +32,17 @@ export default {
   }
 }
 
+h2{
+  color: hsla(160, 100%, 37%, 1);
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.appel {
+  padding: 20px;
+  border-bottom: 2px solid hsla(160, 100%, 37%, 1);
+}
 </style>
